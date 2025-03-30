@@ -3953,6 +3953,124 @@
             }, 1000); // Longer delay to ensure all other scripts have run
         });
     </script>
+
+    <script>
+        // Final navigation fix - focus on making links work
+        window.addEventListener('load', function() {
+            // Wait until everything is loaded
+            setTimeout(function() {
+                // Get all navigation links
+                const allNavLinks = document.querySelectorAll('nav a');
+                
+                // Replace all navigation links with new ones that have direct href handling
+                allNavLinks.forEach(function(link) {
+                    // Get the original href and text
+                    const href = link.getAttribute('href');
+                    const text = link.textContent;
+                    
+                    // Create a new link element
+                    const newLink = document.createElement('a');
+                    newLink.textContent = text;
+                    newLink.href = href;
+                    
+                    // Add the same classes
+                    newLink.className = link.className;
+                    
+                    // Replace the old link with the new one
+                    link.parentNode.replaceChild(newLink, link);
+                    
+                    // Add a direct click handler that will work on mobile
+                    newLink.onclick = function(e) {
+                        // Get the target section
+                        const targetId = href.replace('#', '');
+                        const targetSection = document.getElementById(targetId);
+                        
+                        if (targetSection) {
+                            e.preventDefault();
+                            
+                            // Close the mobile menu if it's open
+                            const mainNav = document.getElementById('mainNav');
+                            const navOverlay = document.getElementById('navOverlay');
+                            const mobileToggle = document.getElementById('mobileMenuBtn');
+                            
+                            if (window.innerWidth <= 992) {
+                                if (mainNav) mainNav.classList.remove('active');
+                                if (navOverlay) navOverlay.classList.remove('active');
+                                document.body.classList.remove('nav-active');
+                                
+                                // Reset any toggle button icons
+                                const toggleIcons = document.querySelectorAll('.mobile-nav-toggle i');
+                                toggleIcons.forEach(icon => {
+                                    icon.classList.remove('fa-times');
+                                    icon.classList.add('fa-bars');
+                                });
+                            }
+                            
+                            // Scroll to the section
+                            window.scrollTo({
+                                top: targetSection.offsetTop - 70, // Adjust for header height
+                                behavior: 'smooth'
+                            });
+                        }
+                    };
+                });
+                
+                // Create a simple mobile toggle that just shows/hides the menu
+                const header = document.querySelector('header');
+                if (header) {
+                    // Remove all existing toggle buttons
+                    const existingButtons = document.querySelectorAll('.mobile-nav-toggle');
+                    existingButtons.forEach(btn => btn.remove());
+                    
+                    // Create a new, simple toggle button
+                    const simpleToggle = document.createElement('button');
+                    simpleToggle.className = 'mobile-nav-toggle';
+                    simpleToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    simpleToggle.style.zIndex = '2000';
+                    
+                    // Add it to the header
+                    header.appendChild(simpleToggle);
+                    
+                    // Simple toggle functionality
+                    simpleToggle.onclick = function() {
+                        const mainNav = document.getElementById('mainNav');
+                        const navOverlay = document.getElementById('navOverlay');
+                        
+                        if (mainNav) mainNav.classList.toggle('active');
+                        if (navOverlay) navOverlay.classList.toggle('active');
+                        document.body.classList.toggle('nav-active');
+                        
+                        // Toggle icon
+                        const icon = this.querySelector('i');
+                        if (icon.classList.contains('fa-bars')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    };
+                    
+                    // Make overlay close the menu
+                    const navOverlay = document.getElementById('navOverlay');
+                    if (navOverlay) {
+                        navOverlay.onclick = function() {
+                            const mainNav = document.getElementById('mainNav');
+                            if (mainNav) mainNav.classList.remove('active');
+                            this.classList.remove('active');
+                            document.body.classList.remove('nav-active');
+                            
+                            const icon = simpleToggle.querySelector('i');
+                            if (icon) {
+                                icon.classList.remove('fa-times');
+                                icon.classList.add('fa-bars');
+                            }
+                        };
+                    }
+                }
+            }, 1500); // Longer delay to ensure everything is loaded
+        });
+    </script>
 </body>
 </html>
 
