@@ -1,0 +1,61 @@
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Project section styles - consistent with skills sections */
+#skills, #non-technical-skills, #technical-projects, #non-technical-projects {
+    padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+    #about, #skills, #non-technical-skills, #experience, #technical-projects, #non-technical-projects, #achievements, #contact {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .skills-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #about, #skills, #non-technical-skills, #experience, #technical-projects, #non-technical-projects, #achievements, #contact {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    
+    .skills-grid {
+        gap: 1.25rem;
+    }
+}
+
+/* Background image styles for skill categories */
+html[data-bg="bg1"] .skill-category,
+html[data-bg="bg2"] .skill-category {
+    background-color: rgba(20, 20, 30, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+html[data-bg="bg1"] .skill-category h3,
+html[data-bg="bg2"] .skill-category h3 {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+html[data-bg="bg1"] .skill-list li,
+html[data-bg="bg2"] .skill-list li {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+} 

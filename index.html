@@ -1,0 +1,3141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Abhishek Zinzuvadiya | Semiconductor Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            /* Professional Theme (Default) - Enhanced */
+            --primary-color: #1a73e8;
+            --secondary-color: #34a853;
+            --background-color: rgba(248, 249, 250, 0.92);
+            --text-color: #202124;
+            --card-color: rgba(255, 255, 255, 0.85);
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --highlight-color: #fbbc05;
+            --border-color: rgba(218, 220, 224, 0.8);
+            --professional-gray: #5f6368;
+            --accent-color: #ea4335;
+            --link-color: #1967d2;
+            --heading-color: #1a73e8;
+            --primary-color-rgb: 26, 115, 232;
+            --secondary-color-rgb: 52, 168, 83;
+            --bg-overlay-opacity: 0.85;
+        }
+
+        html[data-theme="dark"] {
+            --primary-color: #6200ee;
+            --secondary-color: #03dac6;
+            --background-color: rgba(18, 18, 18, 0.95);
+            --text-color: #e0e0e0;
+            --card-color: rgba(30, 30, 30, 0.8);
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --highlight-color: #bb86fc;
+            --border-color: rgba(51, 51, 51, 0.9);
+            --professional-gray: #b0b0b0;
+            --accent-color: #cf6679;
+            --link-color: #bb86fc;
+            --heading-color: #bb86fc;
+            --primary-color-rgb: 98, 0, 238;
+            --secondary-color-rgb: 3, 218, 198;
+        }
+
+        html[data-theme="blue"] {
+            --primary-color: #4285f4;
+            --secondary-color: #34a853;
+            --background-color: rgba(255, 255, 255, 0.92);
+            --text-color: #3c4043;
+            --card-color: rgba(241, 243, 244, 0.85);
+            --shadow-color: rgba(66, 133, 244, 0.2);
+            --highlight-color: #fbbc05;
+            --border-color: rgba(218, 220, 224, 0.8);
+            --professional-gray: #5f6368;
+            --accent-color: #ea4335;
+            --link-color: #4285f4;
+            --heading-color: #4285f4;
+            --primary-color-rgb: 66, 133, 244;
+            --secondary-color-rgb: 52, 168, 83;
+        }
+
+        /* New Green Theme */
+        html[data-theme="green"] {
+            --primary-color: #0f9d58;
+            --secondary-color: #4285f4;
+            --background-color: rgba(240, 247, 244, 0.92);
+            --text-color: #2e3c2d;
+            --card-color: rgba(255, 255, 255, 0.85);
+            --shadow-color: rgba(15, 157, 88, 0.15);
+            --highlight-color: #fbbc05;
+            --border-color: rgba(206, 234, 214, 0.8);
+            --professional-gray: #5f6368;
+            --accent-color: #db4437;
+            --link-color: #0f9d58;
+            --heading-color: #0f9d58;
+            --primary-color-rgb: 15, 157, 88;
+            --secondary-color-rgb: 66, 133, 244;
+        }
+
+        /* New Purple Theme */
+        html[data-theme="purple"] {
+            --primary-color: #673ab7;
+            --secondary-color: #3f51b5;
+            --background-color: rgba(245, 240, 255, 0.92);
+            --text-color: #311b92;
+            --card-color: rgba(255, 255, 255, 0.85);
+            --shadow-color: rgba(103, 58, 183, 0.15);
+            --highlight-color: #ff9800;
+            --border-color: rgba(209, 196, 233, 0.8);
+            --professional-gray: #666666;
+            --accent-color: #e91e63;
+            --link-color: #673ab7;
+            --heading-color: #673ab7;
+            --primary-color-rgb: 103, 58, 183;
+            --secondary-color-rgb: 63, 81, 181;
+        }
+
+        /* Sleek Neon Theme */
+        html[data-theme="neon"] {
+            --primary-color: #00ff99;
+            --secondary-color: #ff00cc;
+            --background-color: rgba(15, 15, 26, 0.95);
+            --text-color: #e0e0ff;
+            --card-color: rgba(26, 26, 46, 0.8);
+            --shadow-color: rgba(0, 255, 153, 0.25);
+            --highlight-color: #ff00cc;
+            --border-color: rgba(48, 48, 70, 0.8);
+            --professional-gray: #b0b0d0;
+            --accent-color: #ff9900;
+            --link-color: #00ffcc;
+            --heading-color: #00ff99;
+            --primary-color-rgb: 0, 255, 153;
+            --secondary-color-rgb: 255, 0, 204;
+            --hero-text-shadow: 0 0 10px rgba(0, 255, 153, 0.8), 0 0 20px rgba(0, 255, 153, 0.5);
+            --hero-heading-color: #ffffff;
+        }
+
+        /* New Midnight Theme (fully dark) */
+        html[data-theme="midnight"] {
+            --primary-color: #6200ee;
+            --secondary-color: #03dac6;
+            --background-color: #121212;
+            --text-color: #e0e0e0;
+            --card-color: #1e1e1e;
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --highlight-color: #bb86fc;
+            --border-color: #333333;
+            --professional-gray: #b0b0b0;
+            --accent-color: #cf6679;
+            --link-color: #bb86fc;
+            --heading-color: #bb86fc;
+        }
+
+        /* New High Contrast Theme for Accessibility */
+        html[data-theme="high-contrast"] {
+            --primary-color: #ffff00;
+            --secondary-color: #00ffff;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --card-color: #121212;
+            --shadow-color: rgba(255, 255, 255, 0.2);
+            --highlight-color: #ff00ff;
+            --border-color: #ffffff;
+            --professional-gray: #dddddd;
+            --accent-color: #ff8000;
+        }
+
+        /* Add background image themes */
+        html[data-bg="none"] {
+            background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="rgba(255,255,255,0.1)" fill-rule="evenodd"/%3E%3C/svg%3E');
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        html[data-bg="bg1"] {
+            background-image: url('bg1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        html[data-bg="bg2"] {
+            background-image: url('bg2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Additional styles for better text visibility with background images */
+        html[data-bg="bg1"] .section-title,
+        html[data-bg="bg2"] .section-title,
+        html[data-bg="bg1"] .timeline-title,
+        html[data-bg="bg2"] .timeline-title,
+        html[data-bg="bg1"] h3,
+        html[data-bg="bg2"] h3 {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        
+        /* Enhanced card backgrounds for better contrast against image backgrounds */
+        html[data-bg="bg1"] .card-color,
+        html[data-bg="bg2"] .card-color,
+        html[data-bg="bg1"] .timeline-content,
+        html[data-bg="bg2"] .timeline-content,
+        html[data-bg="bg1"] .skill-category,
+        html[data-bg="bg2"] .skill-category,
+        html[data-bg="bg1"] .achievement-card,
+        html[data-bg="bg2"] .achievement-card,
+        html[data-bg="bg1"] .contact-info,
+        html[data-bg="bg2"] .contact-info,
+        html[data-bg="bg1"] .contact-form,
+        html[data-bg="bg2"] .contact-form {
+            background-color: rgba(30, 30, 40, 0.85);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Enhanced text visibility in hero section with background images */
+        html[data-bg="bg1"] .hero h1,
+        html[data-bg="bg2"] .hero h1 {
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.9);
+            color: white;
+            font-weight: 700;
+        }
+        
+        html[data-bg="bg1"] .hero p,
+        html[data-bg="bg2"] .hero p {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        /* Make all section text more readable with image backgrounds */
+        html[data-bg="bg1"] section p,
+        html[data-bg="bg2"] section p,
+        html[data-bg="bg1"] section li,
+        html[data-bg="bg2"] section li {
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body {
+            font-family: 'Google Sans', 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--background-color);
+            background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="rgba(0,0,0,.03)" fill-rule="evenodd"/%3E%3C/svg%3E');
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        /* Background overlay for image backgrounds */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--background-color);
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.7; /* Increased opacity for better text visibility */
+        }
+        
+        /* Additional overlay for better text contrast with background images */
+        html[data-bg="bg1"] body::after,
+        html[data-bg="bg2"] body::after {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65));
+            opacity: 1;
+        }
+        
+        /* Direct background image container for better control */
+        #bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65));
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        /* Enhanced text visibility in hero section with background images */
+        html[data-bg="bg1"] .hero h1,
+        html[data-bg="bg2"] .hero h1 {
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+            color: white;
+            font-weight: 700;
+            font-size: 3rem;
+        }
+        
+        html[data-bg="bg1"] .hero p,
+        html[data-bg="bg2"] .hero p {
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+            color: rgba(255, 255, 255, 1);
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        
+        /* Make all section text more readable with image backgrounds */
+        html[data-bg="bg1"] section p,
+        html[data-bg="bg2"] section p,
+        html[data-bg="bg1"] section li,
+        html[data-bg="bg2"] section li {
+            color: rgba(255, 255, 255, 1);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+        
+        /* Enhanced section titles for image backgrounds */
+        html[data-bg="bg1"] .section-title,
+        html[data-bg="bg2"] .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9);
+            color: white;
+        }
+        
+        /* Enhanced headings for better visibility */
+        html[data-bg="bg1"] h3,
+        html[data-bg="bg2"] h3,
+        html[data-bg="bg1"] .timeline-title,
+        html[data-bg="bg2"] .timeline-title {
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        /* Enhanced card backgrounds for better contrast against image backgrounds */
+        html[data-bg="bg1"] .card-color,
+        html[data-bg="bg2"] .card-color,
+        html[data-bg="bg1"] .timeline-content,
+        html[data-bg="bg2"] .timeline-content,
+        html[data-bg="bg1"] .skill-category,
+        html[data-bg="bg2"] .skill-category,
+        html[data-bg="bg1"] .achievement-card,
+        html[data-bg="bg2"] .achievement-card,
+        html[data-bg="bg1"] .contact-info,
+        html[data-bg="bg2"] .contact-info,
+        html[data-bg="bg1"] .contact-form,
+        html[data-bg="bg2"] .contact-form {
+            background-color: rgba(20, 20, 30, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        @media (max-width: 992px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 250px;
+                height: 100vh;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                padding: 80px 20px 30px;
+                gap: 0.8rem;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+                transition: right 0.3s ease;
+                z-index: 1000;
+                overflow-y: auto;
+            }
+            
+            nav ul.active {
+                right: 0;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.8rem 0;
+                font-size: 1.1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+                z-index: 999;
+            }
+            
+            .overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            background-color: var(--primary-color);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: var(--hero-text-shadow, 0 2px 4px rgba(0, 0, 0, 0.7));
+            color: var(--hero-heading-color, white);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0; /* Reduced from 5rem */
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--heading-color);
+            position: relative;
+            display: inline-block;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .section-title::before {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-color);
+            opacity: 0.2;
+            transform: translateZ(-10px);
+            filter: blur(3px);
+            pointer-events: none;
+        }
+
+        .section-title:hover {
+            transform: rotateX(10deg) rotateY(-10deg) translateZ(20px);
+        }
+
+        .section-title:hover::before {
+            opacity: 0.3;
+            transform: translateZ(-20px);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem; /* Reduced from 3rem */
+            align-items: flex-start; /* Changed from center for better alignment when reducing space */
+            margin-top: 0;  /* Remove any top margin */
+        }
+
+        .about-text p {
+            margin-bottom: 1rem; /* Reduced from 1.5rem */
+            color: var(--text-color);
+            line-height: 1.7; /* Slightly increased for better readability */
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0; /* Remove margin from last paragraph */
+        }
+
+        .about-image {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Better alignment with text */
+            margin-top: -2.5rem; /* Negative margin to pull image up to title level */
+        }
+
+        @media (max-width: 768px) {
+            .about-image {
+                margin-top: 0; /* Reset negative margin on mobile */
+            }
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.03) rotate(1deg);
+            box-shadow: 0 15px 30px var(--shadow-color);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background-color: var(--card-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-category h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--heading-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            padding: 3px 5px;
+            border-radius: 4px;
+        }
+
+        .skill-list li::before {
+            content: '▹';
+            color: var(--primary-color);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .skill-list li:hover {
+            background-color: rgba(var(--primary-color-rgb, 26, 115, 232), 0.1);
+            transform: translateX(5px);
+            padding-left: 10px;
+        }
+
+        .skill-list li:hover::before {
+            color: var(--highlight-color);
+            transform: scale(1.2);
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            width: 2px;
+            height: 100%;
+            background-color: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 80px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            border: 4px solid var(--background-color);
+        }
+
+        .timeline-content {
+            background-color: var(--card-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            border: 1px solid var(--border-color);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .timeline-date {
+            color: var(--heading-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-title::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            right: -10px;
+            bottom: -3px;
+            height: 2px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover .timeline-title::after {
+            transform: scaleX(1);
+        }
+
+        .timeline-company {
+            color: var(--professional-gray);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .timeline-description {
+            color: var(--text-color);
+        }
+
+        /* Achievements Section */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .achievement-card {
+            background-color: var(--card-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--highlight-color));
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .achievement-card:hover::before {
+            transform: translateY(0);
+        }
+
+        .achievement-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .achievement-card p {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-date {
+            font-size: 0.9rem;
+            color: var(--professional-gray);
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .contact-info {
+            background-color: var(--card-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--heading-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--heading-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--heading-color);
+        }
+
+        .contact-form {
+            background-color: var(--card-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .about-content {
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            section {
+                padding: 4rem 0;
+            }
+            
+            .hero {
+                padding: 7rem 0 3.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                gap: 1.5rem;
+            }
+            
+            .skills-grid, .achievements-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 0;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9); /* Enhanced shadow for better visibility */
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); /* Enhanced shadow for better visibility */
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .about-image {
+                order: -1;
+                margin-bottom: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .timeline-item {
+                padding-left: 60px;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-dot {
+                left: 10px;
+                width: 18px;
+                height: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .skills-grid, .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title::after {
+                width: 40px;
+                height: 2px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .profile-image {
+                max-width: 250px;
+            }
+            
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-btns {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .section-title {
+                font-size: 1.4rem;
+            }
+            
+            .timeline-item {
+                padding-left: 50px;
+            }
+            
+            .timeline-content {
+                padding: 1rem;
+            }
+            
+            .hero {
+                padding: 5.5rem 0 2.5rem;
+            }
+            
+            section {
+                padding: 2.5rem 0;
+            }
+            
+            .about-text p {
+                margin-bottom: 1rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            html {
+                font-size: 14px;
+            }
+            
+            .container {
+                padding: 0 0.8rem;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            .logo i {
+                font-size: 1.5rem;
+            }
+            
+            nav ul {
+                gap: 0.7rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .timeline-item {
+                padding-left: 40px;
+            }
+            
+            .timeline::before {
+                left: 15px;
+            }
+            
+            .timeline-dot {
+                left: 5px;
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        /* Theme Panel */
+        .theme-panel {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            background-color: #121212;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            transform: translateX(350px);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: calc(100vw - 40px); /* Ensures panel doesn't go off-screen on mobile */
+        }
+        
+        .theme-panel.open {
+            transform: translateX(0);
+        }
+        
+        .theme-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .theme-panel-title {
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .theme-panel-close {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 5px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+        
+        .theme-panel-close:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .theme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            padding: 15px;
+        }
+        
+        .theme-option {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theme-option:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .theme-option.active {
+            border-color: white;
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        
+        .theme-option::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .theme-option:hover::after {
+            opacity: 1;
+        }
+        
+        .theme-color-preview {
+            width: 100%;
+            height: 60px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theme-name {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .theme-toggle-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .theme-toggle-btn:hover {
+            transform: rotate(30deg);
+        }
+        
+        .theme-toggle-btn.active {
+            background-color: #f44336;
+        }
+
+        /* Theme color previews */
+        .preview-professional {
+            background: linear-gradient(135deg, #1a73e8 50%, #f8f9fa 50%);
+        }
+
+        .preview-dark {
+            background: linear-gradient(135deg, #6200ee 50%, #121212 50%);
+        }
+
+        .preview-blue {
+            background: linear-gradient(135deg, #4285f4 50%, #ffffff 50%);
+        }
+
+        .preview-green {
+            background: linear-gradient(135deg, #0f9d58 50%, #f0f7f4 50%);
+        }
+
+        .preview-purple {
+            background: linear-gradient(135deg, #673ab7 50%, #f5f0ff 50%);
+        }
+
+        .preview-neon {
+            background: linear-gradient(135deg, #00ff99 50%, #0f0f1a 50%);
+        }
+        
+        /* Background image options styles */
+        .bg-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            padding: 15px;
+            padding-top: 5px;
+        }
+        
+        .bg-option {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bg-option:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .bg-option.active {
+            border-color: white;
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        
+        .bg-preview {
+            width: 100%;
+            height: 60px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .bg-none {
+            background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="rgba(255,255,255,0.1)" fill-rule="evenodd"/%3E%3C/svg%3E');
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .bg-1 {
+            background-image: url('bg1.jpg');
+            background-size: cover;
+            background-position: center;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+        }
+        
+        .bg-2 {
+            background-image: url('bg2.jpg');
+            background-size: cover;
+            background-position: center;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+        }
+        
+        .bg-name {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Semiconductor 3D background objects */
+        .bg-objects-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .bg-object {
+            position: absolute;
+            opacity: 0.12;
+            filter: blur(1px);
+            transition: transform 0.8s ease;
+            z-index: -1;
+            cursor: pointer;
+        }
+        
+        .bg-object:hover {
+            opacity: 0.3 !important;
+            filter: blur(0) !important;
+            transition: opacity 0.3s ease, filter 0.3s ease, transform 0.5s ease !important;
+        }
+        
+        .chip {
+            width: 200px;
+            height: 200px;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            background: linear-gradient(45deg, var(--primary-color) 0%, transparent 60%);
+            box-shadow: 0 0 20px rgba(var(--primary-color), 0.3);
+            transform: perspective(800px) rotateX(20deg) rotateY(30deg);
+        }
+        
+        .chip-grid {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background-image: linear-gradient(0deg, var(--primary-color) 1px, transparent 1px),
+                               linear-gradient(90deg, var(--primary-color) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.8;
+        }
+        
+        .circuit {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 1px solid var(--secondary-color);
+            background: radial-gradient(circle, transparent 60%, var(--secondary-color) 100%);
+            transform: perspective(800px) rotateX(-20deg) rotateY(-15deg);
+        }
+        
+        .circuit-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            background-image: 
+                linear-gradient(90deg, transparent 48%, var(--secondary-color) 48%, var(--secondary-color) 52%, transparent 52%),
+                linear-gradient(180deg, transparent 48%, var(--secondary-color) 48%, var(--secondary-color) 52%, transparent 52%);
+            opacity: 0.6;
+        }
+        
+        .transistor {
+            width: 150px;
+            height: 150px;
+            background-color: transparent;
+            border: 2px solid var(--accent-color);
+            transform: perspective(800px) rotateZ(45deg) rotateX(30deg) rotateY(45deg);
+        }
+        
+        .transistor::before,
+        .transistor::after {
+            content: '';
+            position: absolute;
+            background-color: var(--accent-color);
+        }
+        
+        .transistor::before {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .transistor::after {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        /* 3D hover effects for text sections */
+        .section-title,
+        .timeline-title,
+        .skill-category h3,
+        .achievement-card h3 {
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+        }
+        
+        .section-title:hover,
+        .timeline-title:hover,
+        .skill-category h3:hover,
+        .achievement-card h3:hover {
+            transform: translateZ(30px);
+            text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Paragraph hover effects */
+        .about-text p,
+        .timeline-description p,
+        .timeline-description ul li,
+        .achievement-card p {
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        
+        .about-text p:hover,
+        .timeline-description p:hover,
+        .timeline-description ul li:hover,
+        .achievement-card p:hover {
+            transform: translateX(5px);
+            color: var(--primary-color);
+        }
+        
+        /* Prevent logo from scrolling to top */
+        .logo a, .logo span {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer; /* Changed from default */
+        }
+        
+        /* Global hover animations for all components */
+        button, .btn, .logo i, .social-links a, form input, form textarea, 
+        .skill-category, .achievement-card, .timeline-content, .contact-info, .contact-form {
+            transition: all 0.3s ease;
+        }
+        
+        /* Button hover effects */
+        button:hover, .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 15px var(--shadow-color);
+        }
+        
+        /* Card hover effects */
+        .skill-category:hover, .contact-info:hover, .contact-form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px var(--shadow-color);
+            border-color: var(--primary-color);
+        }
+        
+        /* Timeline hover effects */
+        .timeline-content:hover {
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 10px 20px var(--shadow-color);
+            border-color: var(--primary-color);
+        }
+        
+        /* Form elements hover effects */
+        form input:hover, form textarea:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px var(--shadow-color);
+        }
+        
+        form input:focus, form textarea:focus {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 12px var(--shadow-color);
+            outline: none;
+        }
+        
+        /* Logo hover effects */
+        .logo:hover i {
+            transform: rotate(20deg) scale(1.1);
+            color: var(--highlight-color);
+        }
+        
+        /* Nav item hover effects */
+        nav a {
+            transition: color 0.3s, transform 0.3s;
+        }
+        
+        nav a:hover {
+            transform: translateY(-2px);
+            color: var(--highlight-color);
+        }
+        
+        /* Social links hover effects */
+        .social-links a:hover {
+            transform: translateY(-3px) scale(1.2);
+            color: var(--primary-color);
+        }
+        
+        /* Timeline dot hover effects */
+        .timeline-dot {
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.2);
+            background-color: var(--highlight-color);
+        }
+        
+        /* Profile image hover effect */
+        .profile-image {
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.03) rotate(1deg);
+            box-shadow: 0 15px 30px var(--shadow-color);
+        }
+        
+        /* 3D animation for section titles */
+        .section-title {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+        
+        .section-title::before {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-color);
+            opacity: 0.2;
+            transform: translateZ(-10px);
+            filter: blur(3px);
+            pointer-events: none;
+        }
+        
+        .section-title:hover {
+            transform: rotateX(10deg) rotateY(-10deg) translateZ(20px);
+        }
+        
+        .section-title:hover::before {
+            opacity: 0.3;
+            transform: translateZ(-20px);
+        }
+        
+        /* Enhanced timeline animations */
+        .timeline-content {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .timeline-title {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-title::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            right: -10px;
+            bottom: -3px;
+            height: 2px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-content:hover .timeline-title::after {
+            transform: scaleX(1);
+        }
+        
+        /* Interactive background objects */
+        .bg-object {
+            cursor: pointer;
+        }
+        
+        .bg-object:hover {
+            opacity: 0.3 !important;
+            filter: blur(0) !important;
+            transition: opacity 0.3s ease, filter 0.3s ease, transform 0.5s ease !important;
+        }
+        
+        /* Skill list hover effect */
+        .skill-list li {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            padding: 3px 5px;
+            border-radius: 4px;
+        }
+        
+        .skill-list li:hover {
+            background-color: rgba(var(--primary-color-rgb, 26, 115, 232), 0.1);
+            transform: translateX(5px);
+            padding-left: 10px;
+        }
+        
+        .skill-list li::before {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .skill-list li:hover::before {
+            color: var(--highlight-color);
+            transform: scale(1.2);
+        }
+        
+        /* Achievement cards enhanced hover effect */
+        .achievement-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--highlight-color));
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .achievement-card:hover::before {
+            transform: translateY(0);
+        }
+        
+        /* Theme panel buttons animation */
+        .theme-option {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theme-option::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .theme-option:hover::after {
+            opacity: 1;
+        }
+
+        /* Background objects responsive adjustment */
+        @media (max-width: 768px) {
+            .bg-object {
+                opacity: 0.08; /* Slightly reduced opacity on mobile */
+            }
+            
+            .theme-toggle-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+            
+            .theme-panel {
+                width: 250px;
+                padding: 12px;
+            }
+            
+            .theme-grid {
+                gap: 8px;
+            }
+            
+            .theme-option {
+                padding: 10px;
+            }
+            
+            .theme-color-preview {
+                height: 50px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .bg-object.chip {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .bg-object.circuit {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .bg-object.transistor {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .theme-toggle-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+                right: 15px;
+                bottom: 15px;
+            }
+            
+            .theme-panel {
+                right: 15px;
+                bottom: 65px;
+                width: 230px;
+            }
+        }
+
+        /* About Section specific adjustments */
+        #about {
+            padding-top: 4.5rem;
+            padding-bottom: 3.5rem;
+        }
+        
+        /* Skills Section specific adjustments */
+        #skills {
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            #about, #skills, #experience, #achievements, #contact {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #about, #skills, #experience, #achievements, #contact {
+                padding-top: 2.5rem;
+                padding-bottom: 2.5rem;
+            }
+        }
+
+        /* Mobile responsive improvements for background images */
+        @media (max-width: 768px) {
+            html[data-bg="bg1"] .hero h1,
+            html[data-bg="bg2"] .hero h1 {
+                font-size: 2.2rem;
+                text-shadow: 0 3px 8px rgba(0, 0, 0, 1);
+            }
+            
+            html[data-bg="bg1"] .hero p,
+            html[data-bg="bg2"] .hero p {
+                font-size: 1.2rem;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+            }
+            
+            html[data-bg="bg1"] .section-title,
+            html[data-bg="bg2"] .section-title {
+                font-size: 1.8rem;
+            }
+            
+            html[data-bg="bg1"] section p,
+            html[data-bg="bg2"] section p,
+            html[data-bg="bg1"] section li,
+            html[data-bg="bg2"] section li {
+                font-size: 1.05rem;
+            }
+            
+            html[data-bg="bg1"] .skill-category,
+            html[data-bg="bg2"] .skill-category,
+            html[data-bg="bg1"] .achievement-card,
+            html[data-bg="bg2"] .achievement-card,
+            html[data-bg="bg1"] .timeline-content,
+            html[data-bg="bg2"] .timeline-content {
+                background-color: rgba(10, 10, 20, 0.95);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            html[data-bg="bg1"] .hero h1,
+            html[data-bg="bg2"] .hero h1 {
+                font-size: 1.9rem;
+            }
+        }
+
+        .contact-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Project Sections Styling */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background-color: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .project-link {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .project-link:hover {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .project-description {
+            color: var(--text-color);
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            background-color: rgba(var(--primary-rgb), 0.2);
+            color: var(--primary-color);
+            font-size: 0.8rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            background-color: rgba(var(--primary-rgb), 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Make sure existing skills section and new skills sections look consistent */
+        #skills, #non-technical-skills, #technical-projects, #non-technical-projects {
+            padding: 6rem 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #about, #skills, #non-technical-skills, #experience, #technical-projects, #non-technical-projects, #achievements, #contact {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .project-card {
+                padding: 1.25rem;
+            }
+            
+            .project-title {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #about, #skills, #non-technical-skills, #experience, #technical-projects, #non-technical-projects, #achievements, #contact {
+                padding-top: 2.5rem;
+                padding-bottom: 2.5rem;
+            }
+            
+            .projects-grid {
+                gap: 1.25rem;
+            }
+            
+            .project-card {
+                padding: 1rem;
+            }
+            
+            .project-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Background image styles for project sections */
+        html[data-bg="bg1"] .project-card,
+        html[data-bg="bg2"] .project-card {
+            background-color: rgba(20, 20, 30, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        html[data-bg="bg1"] .project-title,
+        html[data-bg="bg2"] .project-title {
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        html[data-bg="bg1"] .project-description,
+        html[data-bg="bg2"] .project-description {
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        
+        html[data-bg="bg1"] .project-link,
+        html[data-bg="bg2"] .project-link {
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        html[data-bg="bg1"] .tech-tag,
+        html[data-bg="bg2"] .tech-tag {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        #skills, #non-technical-skills, #technical-projects, #non-technical-projects {
+            padding: 6rem 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .skills-grid {
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .skills-grid {
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #about, #skills, #non-technical-skills, #experience, #technical-projects, #non-technical-projects, #achievements, #contact {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+            
+            .skills-grid {
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #about, #skills, #non-technical-skills, #experience, #technical-projects, #non-technical-projects, #achievements, #contact {
+                padding-top: 2.5rem;
+                padding-bottom: 2.5rem;
+            }
+            
+            .skills-grid {
+                gap: 1.25rem;
+            }
+        }
+
+        /* Background image styles for skill categories with background images */
+        html[data-bg="bg1"] .skill-category,
+        html[data-bg="bg2"] .skill-category {
+            background-color: rgba(20, 20, 30, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        html[data-bg="bg1"] .skill-category h3,
+        html[data-bg="bg2"] .skill-category h3 {
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        html[data-bg="bg1"] .skill-list li,
+        html[data-bg="bg2"] .skill-list li {
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Objects -->
+    <div class="bg-objects-container">
+        <div class="bg-object chip" style="top: 20%; left: 5%;">
+            <div class="chip-grid"></div>
+        </div>
+        <div class="bg-object circuit" style="top: 60%; left: 85%;">
+            <div class="circuit-lines"></div>
+        </div>
+        <div class="bg-object transistor" style="top: 80%; left: 10%;"></div>
+        <div class="bg-object chip" style="top: 25%; left: 90%; transform: scale(0.7) perspective(800px) rotateX(-10deg) rotateY(-40deg);">
+            <div class="chip-grid"></div>
+        </div>
+        <div class="bg-object circuit" style="top: 15%; left: 40%; transform: scale(0.6) perspective(800px) rotateX(30deg) rotateY(20deg);">
+            <div class="circuit-lines"></div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" id="logo">
+                    <i class="fas fa-microchip"></i>
+                    <span class="logo-text">Abhishek Zinzuvadiya</span>
+                </div>
+                <button class="mobile-nav-toggle" id="mobileNavToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul id="mainNav">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#non-technical-skills">Other Skills</a></li>
+                        <li><a href="#technical-projects">Tech Projects</a></li>
+                        <li><a href="#non-technical-projects">Other Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Nav Overlay -->
+    <div class="overlay" id="navOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Semiconductor Engineer Specializing in VLSI Design & Verification</h1>
+                <p>With expertise in processor design, UVM verification, and low-power optimization, I create efficient silicon solutions that power tomorrow's technology.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        <i class="fas fa-user"></i> Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title" data-text="About Me">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm Abhishek Zinzuvadiya, a passionate Semiconductor Engineer with a Master's degree in VLSI Design from NIT Surathkal. My expertise lies in digital design and verification, with a focus on creating efficient processor architectures and robust verification environments.</p>
+                    <p>Currently working as a Senior R&D Engineer at Synopsys, I specialize in developing cutting-edge verification methodologies for cache subsystems and processor designs. My work bridges the gap between RTL design and silicon implementation, ensuring optimal performance and power efficiency.</p>
+                    <p>When I'm not working on chip designs, I enjoy mentoring aspiring engineers, contributing to open-source hardware projects, and staying updated with the latest advancements in semiconductor technology.</p>
+                </div>
+                <div class="about-image">
+                    <img src="abhishek.jpeg" alt="Abhishek Zinzuvadiya" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title" data-text="Technical Skills">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages & Methodologies</h3>
+                    <ul class="skill-list">
+                        <li>SystemVerilog / Verilog</li>
+                        <li>UVM / OVM Verification</li>
+                        <li>Python for Automation</li>
+                        <li>TCL Scripting</li>
+                        <li>C/C++ for HLS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & EDA</h3>
+                    <ul class="skill-list">
+                        <li>Synopsys VCS, Verdi</li>
+                        <li>Cadence Xcelium, Jasper</li>
+                        <li>Mentor QuestaSim</li>
+                        <li>Formal Verification Tools</li>
+                        <li>Coverage Tools (IMC, UCIS)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-project-diagram"></i> Design Expertise</h3>
+                    <ul class="skill-list">
+                        <li>RTL Design & Synthesis</li>
+                        <li>Functional Verification</li>
+                        <li>Power & Timing Analysis</li>
+                        <li>DFT & Scan Insertion</li>
+                        <li>Low-Power Design Techniques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Non-Technical Skills Section -->
+    <section id="non-technical-skills">
+        <div class="container">
+            <h2 class="section-title" data-text="Non-Technical Skills">Non-Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-users"></i> Leadership & Management</h3>
+                    <ul class="skill-list">
+                        <li>Team Leadership</li>
+                        <li>Project Management</li>
+                        <li>Mentoring & Training</li>
+                        <li>Cross-functional Collaboration</li>
+                        <li>Strategic Planning</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-comments"></i> Communication</h3>
+                    <ul class="skill-list">
+                        <li>Technical Documentation</li>
+                        <li>Presentation Skills</li>
+                        <li>Client Relationship Management</li>
+                        <li>Technical Writing</li>
+                        <li>Cross-cultural Communication</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Problem Solving</h3>
+                    <ul class="skill-list">
+                        <li>Critical Thinking</li>
+                        <li>Analytical Skills</li>
+                        <li>Innovation & Creativity</li>
+                        <li>Decision Making</li>
+                        <li>Root Cause Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Projects Section -->
+    <section id="technical-projects">
+        <div class="container">
+            <h2 class="section-title" data-text="Technical Projects">Technical Projects</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-microchip"></i> Low-Power RISC-V Processor Core</h3>
+                    <ul class="skill-list">
+                        <li>Designed and implemented a complete RISC-V processor core</li>
+                        <li>Optimized for low power applications</li>
+                        <li>Achieved 40% reduction in power consumption</li>
+                        <li>Implemented advanced power gating techniques</li>
+                        <li><strong>Tech:</strong> Verilog, RISC-V, RTL, Low-Power Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-memory"></i> Cache Subsystem Verification Framework</h3>
+                    <ul class="skill-list">
+                        <li>Developed UVM-based verification environment</li>
+                        <li>Created for multi-level cache subsystems</li>
+                        <li>Reduced verification time by 35%</li>
+                        <li>Implemented intelligent test generation</li>
+                        <li><strong>Tech:</strong> SystemVerilog, UVM, Verification</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-bolt"></i> Power Analysis Automation Tool</h3>
+                    <ul class="skill-list">
+                        <li>Created automated power analysis framework</li>
+                        <li>Identified power hotspots in RTL designs</li>
+                        <li>Reduced manual analysis effort by 60%</li>
+                        <li>Improved optimization insights</li>
+                        <li><strong>Tech:</strong> Python, TCL, Power Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Non-Technical Projects Section -->
+    <section id="non-technical-projects">
+        <div class="container">
+            <h2 class="section-title" data-text="Non-Technical Projects">Non-Technical Projects</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-graduation-cap"></i> Engineering Outreach Program</h3>
+                    <ul class="skill-list">
+                        <li>Led a team of 10 engineers</li>
+                        <li>Developed semiconductor education workshops</li>
+                        <li>Reached over 500 students across 15 schools</li>
+                        <li>Created hands-on circuit building activities</li>
+                        <li><strong>Focus:</strong> Education, Leadership, STEM Outreach</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-book"></i> Technical Documentation Improvement</h3>
+                    <ul class="skill-list">
+                        <li>Redesigned technical documentation system</li>
+                        <li>Implemented intuitive structure and templates</li>
+                        <li>Reduced onboarding time by 45%</li>
+                        <li>Created standardized documentation process</li>
+                        <li><strong>Focus:</strong> Documentation, Process Improvement</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i> Semiconductor Industry Blog</h3>
+                    <ul class="skill-list">
+                        <li>Created and maintain technical blog</li>
+                        <li>Focus on semiconductor industry trends</li>
+                        <li>Over 15,000 monthly readers</li>
+                        <li>Featured in industry newsletters</li>
+                        <li><strong>Focus:</strong> Technical Writing, Industry Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title" data-text="Professional Experience">Professional Experience</h2>
+            <div class="timeline">
+                <!-- Synopsys -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - Present</div>
+                        <h3 class="timeline-title">Senior R&D Engineer</h3>
+                        <div class="timeline-company">Synopsys, Bengaluru</div>
+                        <div class="timeline-description">
+                            <p>Leading verification efforts for next-generation processor designs with focus on:</p>
+                            <ul>
+                                <li>Developing UVM-based verification IP for cache subsystems</li>
+                                <li>Implementing coverage-driven verification methodologies</li>
+                                <li>Optimizing verification environments for performance</li>
+                                <li>Mentoring junior engineers in verification best practices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- NIT Surathkal -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020 - 2022</div>
+                        <h3 class="timeline-title">M.Tech in VLSI Design</h3>
+                        <div class="timeline-company">NIT Surathkal</div>
+                        <div class="timeline-description">
+                            <p>Specialized in advanced VLSI design methodologies with focus on:</p>
+                            <ul>
+                                <li>Thesis on "Low-Power Cache Design for AI Processors"</li>
+                                <li>Developed RISC-V based processor prototype</li>
+                                <li>Published 2 papers in IEEE conferences</li>
+                                <li>Coursework in Advanced Digital Design, DFT, and Verification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Samsung -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018 - 2020</div>
+                        <h3 class="timeline-title">Design Verification Engineer</h3>
+                        <div class="timeline-company">Samsung Semiconductor, Bengaluru</div>
+                        <div class="timeline-description">
+                            <p>Worked on mobile GPU verification with responsibilities including:</p>
+                            <ul>
+                                <li>Developed SystemVerilog testbenches for GPU subsystems</li>
+                                <li>Implemented functional coverage models</li>
+                                <li>Performed gate-level simulations</li>
+                                <li>Collaborated with design team on bug resolution</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title" data-text="Key Achievements">Key Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h3><i class="fas fa-trophy"></i> Best Paper Award</h3>
+                    <p>Awarded for research on "Power-Efficient Cache Architectures" at IEEE VLSID Conference 2021</p>
+                    <div class="achievement-date">January 2021</div>
+                </div>
+                <div class="achievement-card">
+                    <h3><i class="fas fa-medal"></i> Innovation Award</h3>
+                    <p>Recognized for developing a novel UVM verification methodology at Synopsys</p>
+                    <div class="achievement-date">October 2022</div>
+                </div>
+                <div class="achievement-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Academic Excellence</h3>
+                    <p>Graduated with distinction in M.Tech VLSI Design from NIT Surathkal</p>
+                    <div class="achievement-date">June 2022</div>
+                </div>
+                <div class="achievement-card">
+                    <h3><i class="fas fa-code"></i> Open Source Contribution</h3>
+                    <p>Major contributor to open-source RISC-V verification framework</p>
+                    <div class="achievement-date">Ongoing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title" data-text="Get In Touch">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>abhishek.zinzuvadiya@example.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 XXXXXXXXXX</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bengaluru, India</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/abhishek-zinzuvadiya/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-researchgate"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Me a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i class="fas fa-microchip"></i>
+                    <span class="logo-text">Abhishek Zinzuvadiya</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#non-technical-skills">Other Skills</a>
+                    <a href="#technical-projects">Tech Projects</a>
+                    <a href="#non-technical-projects">Other Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2023 Abhishek Zinzuvadiya. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme Panel">
+        <i class="fas fa-palette"></i>
+    </button>
+
+    <!-- Theme Panel -->
+    <div class="theme-panel" id="themePanel">
+        <div class="theme-panel-header">
+            <div class="theme-panel-title">
+                <i class="fas fa-palette"></i> Choose Theme
+            </div>
+            <button class="theme-panel-close" id="themePanelClose" aria-label="Close Theme Panel">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="theme-grid">
+            <div class="theme-option" data-theme="professional">
+                <div class="theme-color-preview preview-professional"></div>
+                <div class="theme-name">Professional</div>
+            </div>
+            <div class="theme-option" data-theme="dark">
+                <div class="theme-color-preview preview-dark"></div>
+                <div class="theme-name">Dark</div>
+            </div>
+            <div class="theme-option" data-theme="blue">
+                <div class="theme-color-preview preview-blue"></div>
+                <div class="theme-name">Blue</div>
+            </div>
+            <div class="theme-option" data-theme="green">
+                <div class="theme-color-preview preview-green"></div>
+                <div class="theme-name">Green</div>
+            </div>
+            <div class="theme-option" data-theme="purple">
+                <div class="theme-color-preview preview-purple"></div>
+                <div class="theme-name">Purple</div>
+            </div>
+            <div class="theme-option" data-theme="neon">
+                <div class="theme-color-preview preview-neon"></div>
+                <div class="theme-name">Neon</div>
+            </div>
+        </div>
+        
+        <div class="theme-panel-header" style="margin-top: 15px;">
+            <div class="theme-panel-title">
+                <i class="fas fa-image"></i> Background Image
+            </div>
+        </div>
+        <div class="bg-grid">
+            <div class="bg-option active" data-bg="none">
+                <div class="bg-preview bg-none"></div>
+                <div class="bg-name">Default</div>
+            </div>
+            <div class="bg-option" data-bg="bg1">
+                <div class="bg-preview bg-1"></div>
+                <div class="bg-name">Image 1</div>
+            </div>
+            <div class="bg-option" data-bg="bg2">
+                <div class="bg-preview bg-2"></div>
+                <div class="bg-name">Image 2</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Make logo clickable to scroll to top
+            const logoElement = document.getElementById('logo');
+            const logoTexts = document.querySelectorAll('.logo-text');
+            const logoIcons = document.querySelectorAll('.logo i');
+            
+            // Function to scroll to top
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+            
+            // Add click event to logo elements
+            logoElement.addEventListener('click', scrollToTop);
+            logoTexts.forEach(text => text.addEventListener('click', scrollToTop));
+            logoIcons.forEach(icon => icon.addEventListener('click', scrollToTop));
+            
+            // Make logo in footer also clickable
+            const footerLogo = document.querySelector('footer .logo');
+            if (footerLogo) {
+                footerLogo.addEventListener('click', scrollToTop);
+                footerLogo.style.cursor = 'pointer';
+            }
+            
+            // Theme switching
+            const html = document.documentElement;
+            const body = document.body;
+            
+            // Theme names for display
+            const themeNames = {
+                'professional': 'Professional',
+                'dark': 'Dark',
+                'blue': 'Blue',
+                'green': 'Green',
+                'purple': 'Purple',
+                'neon': 'Neon'
+            };
+            
+            // New Theme Panel Elements
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const themePanel = document.getElementById('themePanel');
+            const themePanelClose = document.getElementById('themePanelClose');
+            const themeOptions = document.querySelectorAll('.theme-option');
+            const bgOptions = document.querySelectorAll('.bg-option');
+            
+            // Function to set background
+            function setBackground(bg) {
+                // Remove active class from all options
+                bgOptions.forEach(option => option.classList.remove('active'));
+                
+                // Add active class to selected option
+                const activeBgOption = document.querySelector(`.bg-option[data-bg="${bg}"]`);
+                if (activeBgOption) {
+                    activeBgOption.classList.add('active');
+                }
+                
+                // Set the bg attribute on the HTML element
+                html.setAttribute('data-bg', bg);
+                
+                // Directly set background image for more reliable rendering
+                if (bg === 'none') {
+                    document.body.style.backgroundImage = 'url(\'data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="rgba(255,255,255,0.1)" fill-rule="evenodd"/%3E%3C/svg%3E\')';
+                } else if (bg === 'bg1') {
+                    document.body.style.backgroundImage = 'url("bg1.jpg")';
+                    document.body.style.backgroundSize = 'cover';
+                    document.body.style.backgroundPosition = 'center';
+                    document.body.style.backgroundAttachment = 'fixed';
+                    
+                    // Update text styles for better readability
+                    document.documentElement.style.setProperty('--hero-text-shadow', '0 3px 10px rgba(0, 0, 0, 0.9)');
+                    
+                    // Ensure the overlay div is properly created for text readability
+                    let overlay = document.getElementById('bg-overlay');
+                    if (!overlay) {
+                        overlay = document.createElement('div');
+                        overlay.id = 'bg-overlay';
+                        overlay.style.position = 'fixed';
+                        overlay.style.top = '0';
+                        overlay.style.left = '0';
+                        overlay.style.width = '100%';
+                        overlay.style.height = '100%';
+                        overlay.style.zIndex = '-1';
+                        overlay.style.pointerEvents = 'none';
+                        document.body.appendChild(overlay);
+                    }
+                    overlay.style.background = 'linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65))';
+                    overlay.style.display = 'block';
+                } else if (bg === 'bg2') {
+                    document.body.style.backgroundImage = 'url("bg2.jpg")';
+                    document.body.style.backgroundSize = 'cover';
+                    document.body.style.backgroundPosition = 'center';
+                    document.body.style.backgroundAttachment = 'fixed';
+                    
+                    // Update text styles for better readability
+                    document.documentElement.style.setProperty('--hero-text-shadow', '0 3px 10px rgba(0, 0, 0, 0.9)');
+                    
+                    // Ensure the overlay div is properly created for text readability
+                    let overlay = document.getElementById('bg-overlay');
+                    if (!overlay) {
+                        overlay = document.createElement('div');
+                        overlay.id = 'bg-overlay';
+                        overlay.style.position = 'fixed';
+                        overlay.style.top = '0';
+                        overlay.style.left = '0';
+                        overlay.style.width = '100%';
+                        overlay.style.height = '100%';
+                        overlay.style.zIndex = '-1';
+                        overlay.style.pointerEvents = 'none';
+                        document.body.appendChild(overlay);
+                    }
+                    overlay.style.background = 'linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65))';
+                    overlay.style.display = 'block';
+                } else {
+                    // Hide overlay for non-image backgrounds
+                    const overlay = document.getElementById('bg-overlay');
+                    if (overlay) {
+                        overlay.style.display = 'none';
+                    }
+                }
+                
+                // Store the selected background in localStorage
+                localStorage.setItem('background', bg);
+                
+                // Show notification
+                showBackgroundNotification(bg);
+                
+                console.log(`Background set to: ${bg}`);
+            }
+            
+            // Function to show background change notification
+            function showBackgroundNotification(bg) {
+                // Create notification element
+                const bgName = bg === 'none' ? 'Default' : bg === 'bg1' ? 'Image 1' : 'Image 2';
+                const notification = document.createElement('div');
+                notification.id = 'bg-notification';
+                notification.innerHTML = `<i class="fas fa-image"></i> ${bgName} background applied`;
+                notification.style.cssText = `
+                    position: fixed;
+                    bottom: 50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: var(--primary-color);
+                    color: white;
+                    padding: 8px 16px;
+                    border-radius: 20px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                    z-index: 1000;
+                `;
+                
+                // Add to body and remove after 3 seconds
+                document.body.appendChild(notification);
+                setTimeout(() => {
+                    notification.style.opacity = '0';
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+            
+            // Function to set theme with smooth transition
+            function setTheme(theme) {
+                // Smooth transition effect
+                body.style.opacity = '0.8';
+                
+                setTimeout(() => {
+                    // Remove active class from all options
+                    themeOptions.forEach(option => option.classList.remove('active'));
+                    
+                    // Add active class to selected option
+                    const activeOption = document.querySelector(`.theme-option[data-theme="${theme}"]`);
+                    
+                    if (activeOption) {
+                        activeOption.classList.add('active');
+                }
+                
+                // Set the theme attribute on the HTML element
+                html.setAttribute('data-theme', theme);
+                
+                // Store the selected theme in localStorage
+                localStorage.setItem('theme', theme);
+                    
+                    // Show theme change notification
+                    showThemeNotification(theme);
+                
+                console.log(`Theme set to: ${theme}`);
+                    
+                    // Update background object colors to match theme
+                    updateBackgroundObjectsForTheme();
+                    
+                    // Restore opacity with transition
+                    setTimeout(() => {
+                        body.style.opacity = '1';
+                    }, 50);
+                }, 150);
+            }
+            
+            // Function to show theme change notification
+            function showThemeNotification(theme) {
+                // Remove existing notification if any
+                const existingNotification = document.getElementById('theme-notification');
+                if (existingNotification) {
+                    existingNotification.remove();
+                }
+                
+                // Create notification element
+                const notification = document.createElement('div');
+                notification.id = 'theme-notification';
+                notification.innerHTML = `<i class="fas fa-palette"></i> ${themeNames[theme]} theme applied`;
+                notification.style.cssText = `
+                    position: fixed;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: var(--primary-color);
+                    color: white;
+                    padding: 8px 16px;
+                    border-radius: 20px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                    z-index: 1000;
+                    font-size: 14px;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                `;
+                
+                document.body.appendChild(notification);
+                
+                // Show and then hide notification
+                setTimeout(() => {
+                    notification.style.opacity = '1';
+                    setTimeout(() => {
+                        notification.style.opacity = '0';
+                        setTimeout(() => {
+                            notification.remove();
+                        }, 300);
+                    }, 2000);
+                }, 10);
+            }
+            
+            // Check for saved theme or default to neon
+            const savedTheme = localStorage.getItem('theme') || 'neon';
+            setTheme(savedTheme);
+            
+            // Check for saved background or default to none
+            const savedBg = localStorage.getItem('background') || 'none';
+            
+            // Apply the background immediately to ensure it loads
+            document.addEventListener('DOMContentLoaded', function() {
+                setBackground(savedBg);
+            });
+            
+            // Theme Panel Toggle
+            themeToggleBtn.addEventListener('click', function() {
+                themePanel.classList.toggle('open');
+                themeToggleBtn.classList.toggle('active');
+            });
+            
+            // Close Theme Panel
+            themePanelClose.addEventListener('click', function() {
+                themePanel.classList.remove('open');
+                themeToggleBtn.classList.remove('active');
+            });
+            
+            // Theme Option Clicks
+            themeOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const theme = option.getAttribute('data-theme');
+                    setTheme(theme);
+                });
+            });
+            
+            // Background Option Clicks
+            bgOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const bg = option.getAttribute('data-bg');
+                    setBackground(bg);
+                });
+            });
+            
+            // Keyboard shortcuts for theme switching (Alt + 1-6)
+            document.addEventListener('keydown', function(e) {
+                // Alt + number shortcuts for themes
+                if (e.altKey && e.key >= '1' && e.key <= '6') {
+                    e.preventDefault();
+                    const themeIndex = parseInt(e.key) - 1;
+                    const themeNames = ['professional', 'dark', 'blue', 'green', 'purple', 'neon'];
+                    if (themeIndex < themeNames.length) {
+                        setTheme(themeNames[themeIndex]);
+                    }
+                }
+                
+                // Toggle theme panel with Alt+T
+                if (e.altKey && e.key === 't') {
+                    e.preventDefault();
+                    themePanel.classList.toggle('open');
+                    themeToggleBtn.classList.toggle('active');
+                }
+                
+                // Background image shortcuts (Alt + Shift + 1-3)
+                if (e.altKey && e.shiftKey && e.key >= '1' && e.key <= '3') {
+                    e.preventDefault();
+                    const bgIndex = parseInt(e.key) - 1;
+                    const bgOptions = ['none', 'bg1', 'bg2'];
+                    if (bgIndex < bgOptions.length) {
+                        setBackground(bgOptions[bgIndex]);
+                    }
+                }
+            });
+            
+            // Close theme panel when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!themePanel.contains(e.target) && e.target !== themeToggleBtn && themePanel.classList.contains('open')) {
+                    themePanel.classList.remove('open');
+                    themeToggleBtn.classList.remove('active');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Form submission
+            const contactForm = document.querySelector('#contact form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! I will get back to you soon.');
+                    this.reset();
+                });
+            }
+
+            // Update background objects colors based on theme
+            function updateBackgroundObjectsForTheme() {
+                const chips = document.querySelectorAll('.chip');
+                const circuits = document.querySelectorAll('.circuit');
+                const transistors = document.querySelectorAll('.transistor');
+                const bgObjects = document.querySelectorAll('.bg-object');
+                
+                // Add subtle animation to objects when theme changes
+                bgObjects.forEach(object => {
+                    object.style.transition = 'transform 0.8s ease, border-color 0.5s ease, background 0.5s ease';
+                    
+                    // Add a small "pop" effect
+                    setTimeout(() => {
+                        object.style.transform = `${object.style.transform.replace(/scale\([^)]+\)/, '')} scale(1.1)`;
+                        setTimeout(() => {
+                            object.style.transform = object.style.transform.replace(/scale\([^)]+\)/, '');
+                        }, 300);
+                    }, 100);
+                });
+                
+                // Ensure 3D animations are adapted to each theme
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                document.body.className = ''; // Clear any theme-specific classes
+                document.body.classList.add(`theme-${currentTheme}`);
+            }
+            
+            // Initialize background objects for current theme
+            updateBackgroundObjectsForTheme();
+            
+            // 3D cursor movement effect for background objects
+            const bgObjects = document.querySelectorAll('.bg-object');
+            
+            document.addEventListener('mousemove', function(e) {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                
+                bgObjects.forEach(object => {
+                    // Calculate movement based on mouse position and object's initial transform
+                    const initialTransform = object.style.transform;
+                    const moveX = (x - 0.5) * 20; // max move 20px
+                    const moveY = (y - 0.5) * 20;
+                    
+                    // Apply a subtle rotation based on mouse position
+                    let rotateX = y * 10 - 5;  // -5 to +5 degrees
+                    let rotateY = -x * 10 + 5; // -5 to +5 degrees
+                    
+                    // Apply transform based on initial transform plus mouse movement
+                    if (initialTransform.includes('scale')) {
+                        // For scaled objects, preserve the scale
+                        const scaleMatch = initialTransform.match(/scale\([^)]+\)/);
+                        const perspectiveMatch = initialTransform.match(/perspective\([^)]+\)/);
+                        const scale = scaleMatch ? scaleMatch[0] : '';
+                        const perspective = perspectiveMatch ? perspectiveMatch[0] : 'perspective(800px)';
+                        
+                        object.style.transform = `${scale} ${perspective} translateX(${moveX}px) translateY(${moveY}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    } else {
+                        // For normal objects
+                        object.style.transform = `perspective(800px) translateX(${moveX}px) translateY(${moveY}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    }
+                });
+            });
+            
+            // Add hover effect to content elements for 3D depth
+            const hoverElements = document.querySelectorAll('.section-title, .timeline-title, h3, .achievement-card, .skill-category, .contact-info, .contact-form');
+            
+            hoverElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateZ(30px)';
+                    this.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+                    this.style.zIndex = '1';
+                    
+                    // Add appropriate shadow based on the current theme
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const isBrightTheme = ['professional', 'blue', 'green', 'purple'].includes(currentTheme);
+                    
+                    if (isBrightTheme) {
+                        this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.15)';
+                    } else {
+                        this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
+                    }
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateZ(0)';
+                    this.style.zIndex = 'auto';
+                    this.style.boxShadow = '';
+                });
+            });
+            
+            // Add floating animation to specific elements
+            function addFloatingAnimation() {
+                const floatElements = [
+                    document.querySelector('.theme-toggle-btn'),
+                    ...document.querySelectorAll('.timeline-dot'),
+                    ...document.querySelectorAll('.bg-object')
+                ];
+                
+                floatElements.forEach((element, index) => {
+                    if (!element) return;
+                    
+                    // Create different animation timing for each element
+                    const delay = index * 0.2; // stagger the animations
+                    const duration = 3 + (index % 2); // alternate between 3 and 4 seconds
+                    
+                    element.style.animation = `float ${duration}s ease-in-out ${delay}s infinite alternate`;
+                });
+            }
+            
+            // Define the floating animation
+            const styleSheet = document.styleSheets[0];
+            styleSheet.insertRule(`
+                @keyframes float {
+                    0% {
+                        transform: translateY(0) translateX(0);
+                    }
+                    100% {
+                        transform: translateY(-10px) translateX(5px);
+                    }
+                }
+            `, styleSheet.cssRules.length);
+            
+            // Add ripple effect to buttons
+            const buttons = document.querySelectorAll('.btn, button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const x = e.clientX - e.target.getBoundingClientRect().left;
+                    const y = e.clientY - e.target.getBoundingClientRect().top;
+                    
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple-effect';
+                    ripple.style.position = 'absolute';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.style.background = 'rgba(255, 255, 255, 0.7)';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.animation = 'ripple 0.6s linear';
+                    ripple.style.pointerEvents = 'none';
+                    
+                    if (getComputedStyle(button).position === 'static') {
+                        button.style.position = 'relative';
+                    }
+                    button.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+            
+            // Define the ripple animation
+            styleSheet.insertRule(`
+                @keyframes ripple {
+                    to {
+                        transform: scale(4);
+                        opacity: 0;
+                    }
+                }
+            `, styleSheet.cssRules.length);
+            
+            // Call the function to add floating animations
+            addFloatingAnimation();
+
+            // Mobile Navigation
+            const mobileNavToggle = document.getElementById('mobileNavToggle');
+            const mainNav = document.getElementById('mainNav');
+            const navOverlay = document.getElementById('navOverlay');
+            const navLinks = document.querySelectorAll('#mainNav a');
+            
+            function toggleMobileNav() {
+                mainNav.classList.toggle('active');
+                navOverlay.classList.toggle('active');
+                
+                // Toggle icon between bars and times
+                const icon = mobileNavToggle.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
+            
+            // Event listeners for mobile navigation
+            if (mobileNavToggle && mainNav && navOverlay) {
+                mobileNavToggle.addEventListener('click', toggleMobileNav);
+                navOverlay.addEventListener('click', toggleMobileNav);
+                
+                // Close menu when a link is clicked
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (mainNav.classList.contains('active')) {
+                            toggleMobileNav();
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
