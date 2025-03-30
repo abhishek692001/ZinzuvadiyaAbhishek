@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Update the viewport meta tag for better mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Abhishek Zinzuvadiya | Semiconductor Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -371,10 +372,18 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            color: white; /* Changed from var(--primary-color) to white */
         }
 
         .logo i {
             font-size: 1.8rem;
+            color: white; /* Ensure icon is also white */
+        }
+
+        .logo-text {
+            color: white; /* Explicitly set logo text to white */
+            font-weight: 600; /* Make it slightly bolder */
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Add subtle shadow for better readability */
         }
 
         /* Navigation */
@@ -427,7 +436,8 @@
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 250px;
+                width: 80%; /* Changed from fixed width to percentage */
+                max-width: 300px; /* Added max-width */
                 height: 100vh;
                 background-color: var(--primary-color);
                 flex-direction: column;
@@ -466,6 +476,130 @@
             .overlay.active {
                 opacity: 1;
                 visibility: visible;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0.5rem 0;
+            }
+            
+            .logo {
+                font-size: 1.3rem; /* Smaller logo text on mobile */
+            }
+            
+            .logo i {
+                font-size: 1.5rem; /* Smaller logo icon on mobile */
+            }
+            
+            .about-content, 
+            .contact-grid {
+                grid-template-columns: 1fr; /* Stack columns on mobile */
+            }
+            
+            .about-image {
+                order: -1; /* Image first on mobile */
+                margin-bottom: 1.5rem;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .profile-image {
+                max-width: 80%; /* Responsive image size */
+                height: auto;
+            }
+            
+            .skills-grid, 
+            .achievements-grid {
+                grid-template-columns: 1fr; /* Single column on mobile */
+                gap: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem; /* Smaller section titles on mobile */
+            }
+            
+            .timeline-item {
+                padding-left: 50px; /* Reduced padding for timeline items */
+            }
+            
+            .timeline::before {
+                left: 15px; /* Adjusted timeline position */
+            }
+            
+            .timeline-dot {
+                left: 5px; /* Adjusted timeline dot position */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem; /* Reduced container padding */
+            }
+            
+            .hero {
+                padding: 5rem 0 2rem; /* Adjusted hero padding */
+            }
+            
+            .hero h1 {
+                font-size: 1.7rem; /* Further reduced heading size */
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            section {
+                padding: 2rem 0; /* Reduced section padding */
+            }
+            
+            .skill-category, 
+            .achievement-card, 
+            .timeline-content, 
+            .contact-info, 
+            .contact-form {
+                padding: 1rem; /* Reduced card padding */
+            }
+            
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.8rem;
+            }
+            
+            /* Fix for theme panel on small screens */
+            .theme-panel {
+                width: 90%;
+                max-width: 280px;
+                right: 5%;
+            }
+        }
+
+        @media (max-width: 360px) {
+            html {
+                font-size: 14px; /* Slightly reduced base font size */
+            }
+            
+            .logo-text {
+                font-size: 1.1rem; /* Ensure logo text fits */
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .timeline-item {
+                padding-left: 40px;
+            }
+            
+            /* Ensure form elements are properly sized */
+            .form-group input,
+            .form-group textarea {
+                padding: 0.6rem;
             }
         }
 
@@ -2124,6 +2258,105 @@
             color: rgba(255, 255, 255, 0.95);
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
         }
+
+        /* Additional Mobile Responsiveness Improvements */
+        @media (max-width: 992px) {
+            /* Improve hero section on tablets */
+            .hero-btns {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            /* Ensure background objects don't interfere with content */
+            .bg-object {
+                opacity: 0.05;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Fix header spacing */
+            header {
+                padding: 0.5rem 0;
+            }
+            
+            /* Improve hero section on mobile */
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+            
+            /* Ensure buttons are properly sized */
+            .btn {
+                width: 100%;
+                justify-content: center;
+                min-height: 44px; /* Better touch target */
+            }
+            
+            /* Fix image display */
+            .profile-image {
+                width: 100%;
+                max-width: 250px;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            /* Improve touch targets */
+            nav a, .social-links a, .theme-option, .bg-option {
+                min-height: 44px;
+            }
+            
+            /* Fix form elements */
+            .form-group input, .form-group textarea {
+                font-size: 16px; /* Prevent iOS zoom on focus */
+            }
+        }
+
+        /* Fix for very small devices */
+        @media (max-width: 360px) {
+            /* Ensure content is readable */
+            .container {
+                padding: 0 0.8rem;
+            }
+            
+            /* Fix navigation menu */
+            nav ul {
+                width: 85%;
+                padding: 70px 15px 20px;
+            }
+            
+            /* Adjust theme panel */
+            .theme-panel {
+                max-width: 250px;
+            }
+            
+            /* Fix logo display */
+            .logo-text {
+                max-width: 150px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        /* Fix body scroll when nav is open */
+        body.nav-active {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ensure all images are responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Improve form usability on mobile */
+        input, textarea, button {
+            -webkit-appearance: none;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -3108,6 +3341,7 @@
             function toggleMobileNav() {
                 mainNav.classList.toggle('active');
                 navOverlay.classList.toggle('active');
+                document.body.classList.toggle('nav-active'); // Add/remove class to body
                 
                 // Toggle icon between bars and times
                 const icon = mobileNavToggle.querySelector('i');
