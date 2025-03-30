@@ -2774,7 +2774,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -2793,7 +2793,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -3566,12 +3566,12 @@
                 // Toggle icon between bars and times
                 const icon = mobileNavToggle.querySelector('i');
                 if (icon) {
-                    if (icon.classList.contains('fa-bars')) {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    } else {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
                     }
                 }
             }
@@ -3672,6 +3672,74 @@
                     };
                 }
             }, 500); // Small delay to ensure DOM is fully loaded
+        });
+    </script>
+
+    <script>
+        // Update default theme to purple and improve spacing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default theme to purple
+            const savedTheme = localStorage.getItem('theme') || 'purple';
+            setTheme(savedTheme);
+            
+            // Add additional padding to improve spacing
+            const contentSections = document.querySelectorAll('.timeline-content, .skill-category, .achievement-card');
+            contentSections.forEach(section => {
+                section.style.padding = '1.5rem';
+                section.style.marginBottom = '1.2rem';
+            });
+            
+            // Improve spacing between timeline items
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                item.style.marginBottom = '2rem';
+            });
+            
+            // Add padding to navigation items for better touch targets
+            const navItems = document.querySelectorAll('nav a');
+            navItems.forEach(item => {
+                item.style.padding = '0.7rem 0.5rem';
+            });
+        });
+    </script>
+
+    <script>
+        // Add minimal horizontal padding to the "Working on:" section
+        document.addEventListener('DOMContentLoaded', function() {
+            // Target specifically the timeline description lists
+            const timelineDescriptions = document.querySelectorAll('.timeline-description ul');
+            
+            timelineDescriptions.forEach(list => {
+                // Add a small left padding to list items
+                const listItems = list.querySelectorAll('li');
+                listItems.forEach(item => {
+                    item.style.paddingLeft = '10px';
+                    item.style.position = 'relative';
+                    
+                    // Add a subtle bullet style
+                    item.style.listStyleType = 'none';
+                    item.style.position = 'relative';
+                    
+                    // Add a small dot before each item
+                    const beforeStyle = document.createElement('style');
+                    beforeStyle.textContent = `
+                        .timeline-description li::before {
+                            content: "•";
+                            position: absolute;
+                            left: 0;
+                            color: var(--primary-color);
+                        }
+                    `;
+                    document.head.appendChild(beforeStyle);
+                });
+                
+                // Add a small left padding to the paragraph before the list
+                const paragraph = list.previousElementSibling;
+                if (paragraph && paragraph.tagName === 'P') {
+                    paragraph.style.paddingLeft = '5px';
+                    paragraph.style.fontWeight = '500';
+                }
+            });
         });
     </script>
 </body>
