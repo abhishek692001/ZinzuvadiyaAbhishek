@@ -2358,6 +2358,158 @@
             appearance: none; /* Standard property for other browsers */
             border-radius: 4px;
         }
+
+        /* Enhanced Mobile & Tablet Experience */
+        @media (max-width: 992px) {
+            /* Improve content readability */
+            body {
+                font-size: 16px;
+            }
+            
+            /* Make hero section more impactful on mobile */
+            .hero {
+                padding: 7rem 0 3rem;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+                margin: 0 auto 1.5rem;
+            }
+            
+            /* Improve section spacing */
+            section {
+                padding: 3rem 0;
+            }
+            
+            /* Ensure cards are readable */
+            .skill-category, 
+            .achievement-card, 
+            .timeline-content {
+                padding: 1.25rem;
+            }
+            
+            /* Fix mobile navigation */
+            #mobileNavToggle {
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 1002;
+            }
+            
+            /* Improve form usability */
+            .form-group input, 
+            .form-group textarea {
+                padding: 12px;
+                font-size: 16px;
+            }
+            
+            /* Fix footer on mobile */
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Fix header on mobile */
+            .header-content {
+                padding: 0.75rem 0;
+            }
+            
+            /* Improve timeline readability */
+            .timeline-item {
+                margin-bottom: 1.5rem;
+            }
+            
+            .timeline-content {
+                padding: 1rem;
+            }
+            
+            .timeline-title {
+                font-size: 1.1rem;
+            }
+            
+            /* Make buttons more tappable */
+            .btn, 
+            button, 
+            .social-links a {
+                min-height: 44px;
+                min-width: 44px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Fix contact section layout */
+            .contact-grid {
+                gap: 1.5rem;
+            }
+            
+            /* Ensure theme panel is usable */
+            .theme-panel {
+                width: 85%;
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Optimize for small screens */
+            .container {
+                padding: 0 1rem;
+            }
+            
+            /* Adjust hero section */
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            /* Fix skills display */
+            .skill-list li {
+                padding: 0.5rem 0.25rem;
+            }
+            
+            /* Improve form on small screens */
+            .form-group {
+                margin-bottom: 1rem;
+            }
+            
+            /* Fix theme toggle position */
+            .theme-toggle-btn {
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+
+        /* Fix for iOS Safari issues */
+        @supports (-webkit-touch-callout: none) {
+            /* iOS specific fixes */
+            input, 
+            textarea, 
+            select {
+                font-size: 16px !important; /* Prevent zoom on focus */
+            }
+        }
+
+        /* Improve tap targets for all touch devices */
+        @media (hover: none) {
+            a, button, .btn, .theme-option, .bg-option {
+                padding: 0.8rem;
+            }
+            
+            nav a {
+                padding: 0.8rem 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2604,59 +2756,104 @@
         <div class="container">
             <h2 class="section-title" data-text="Professional Experience">Professional Experience</h2>
             <div class="timeline">
-                <!-- Synopsys -->
+                <!-- Experience Section - Cadence Design Systems -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2022 - Present</div>
-                        <h3 class="timeline-title">Senior R&D Engineer</h3>
-                        <div class="timeline-company">Synopsys, Bengaluru</div>
+                        <div class="timeline-date">Jul 2023 - Present (1 year 9 months)</div>
+                        <h3 class="timeline-title">Software Engineer - I</h3>
+                        <div class="timeline-company">Cadence Design Systems, Ahmedabad, Gujarat, India</div>
                         <div class="timeline-description">
-                            <p>Leading verification efforts for next-generation processor designs with focus on:</p>
+                            <p>Working on:</p>
                             <ul>
-                                <li>Developing UVM-based verification IP for cache subsystems</li>
-                                <li>Implementing coverage-driven verification methodologies</li>
-                                <li>Optimizing verification environments for performance</li>
-                                <li>Mentoring junior engineers in verification best practices</li>
+                                <li>Verilog, System Verilog, UVM, Xcelium</li>
+                                <li>Development and Debugging, Vplan</li>
+                                <li>Project: "I3C (Improved Inter Integrated Circuit)"</li>
+                                <li>Team Size: 4</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
-                <!-- NIT Surathkal -->
+
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2020 - 2022</div>
-                        <h3 class="timeline-title">M.Tech in VLSI Design</h3>
-                        <div class="timeline-company">NIT Surathkal</div>
+                        <div class="timeline-date">Jan 2023 - Jun 2023 (6 months)</div>
+                        <h3 class="timeline-title">Software Intern</h3>
+                        <div class="timeline-company">Cadence Design Systems, Ahmedabad</div>
                         <div class="timeline-description">
-                            <p>Specialized in advanced VLSI design methodologies with focus on:</p>
+                            <p>Worked on:</p>
                             <ul>
-                                <li>Thesis on "Low-Power Cache Design for AI Processors"</li>
-                                <li>Developed RISC-V based processor prototype</li>
-                                <li>Published 2 papers in IEEE conferences</li>
-                                <li>Coursework in Advanced Digital Design, DFT, and Verification</li>
+                                <li>Verilog, System Verilog, UVM, Xcelium</li>
+                                <li>Development and Debugging, Vplan</li>
+                                <li>Project: "UFS Development"</li>
+                                <li>Team Size: 3</li>
+                                <li>Universal Flash Storage (UFS) is a high-speed, high-capacity flash memory storage specification developed by the MIPI Alliance that provides a significant improvement in performance over earlier standards like eMMC. It supports data rates of up to 11.6 Gbps per lane and is designed to be power-efficient, with features like low-power modes.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Samsung -->
+
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2018 - 2020</div>
-                        <h3 class="timeline-title">Design Verification Engineer</h3>
-                        <div class="timeline-company">Samsung Semiconductor, Bengaluru</div>
+                        <div class="timeline-date">Jun 2022 - Oct 2023 (1 year 5 months)</div>
+                        <h3 class="timeline-title">RTL Design & Verification - Training</h3>
+                        <div class="timeline-company">Semi Design, Noida, Uttar Pradesh, India</div>
                         <div class="timeline-description">
-                            <p>Worked on mobile GPU verification with responsibilities including:</p>
+                            <p>Skills acquired:</p>
                             <ul>
-                                <li>Developed SystemVerilog testbenches for GPU subsystems</li>
-                                <li>Implemented functional coverage models</li>
-                                <li>Performed gate-level simulations</li>
-                                <li>Collaborated with design team on bug resolution</li>
+                                <li>Digital Logic Design, Verilog, System Verilog (Intermediate)</li>
+                                <li>Topics covered: Logic Gates, Gate Level Minimization, Combinational Logic Circuits</li>
+                                <li>Flip-Flops, Sequential Circuits, Register and Counters, Memory Design, FSM</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2022 - Jul 2022 (3 months)</div>
+                        <h3 class="timeline-title">ASIC Intern (Summer Intern)</h3>
+                        <div class="timeline-company">eInfochips (An Arrow Company), Ahmedabad, Gujarat, India</div>
+                        <div class="timeline-description">
+                            <p>Skills developed:</p>
+                            <ul>
+                                <li>ASIC, Physical Design, Clock Tree Synthesis, Blockchain, Solidity</li>
+                                <li>Project: "Study of Metaverse"</li>
+                                <li>Explored ASIC Design Flow and PNR Design Flow with the example of RAM memory Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jan 2022 - Jan 2023 (1 year 1 month)</div>
+                        <h3 class="timeline-title">Organising Secretary</h3>
+                        <div class="timeline-company">ECO - Electronics and Communication Students' Organisation, Ahmedabad, Gujarat, India</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jan 2021 - Jan 2022 (1 year 1 month)</div>
+                        <h3 class="timeline-title">Executive Committee Member</h3>
+                        <div class="timeline-company">ECO - Electronics and Communication Students' Organisation, Ahmedabad, Gujarat, India</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Apr 2021 - Jun 2021 (3 months)</div>
+                        <h3 class="timeline-title">Digital Marketing Intern</h3>
+                        <div class="timeline-company">Techinquiri</div>
+                        <div class="timeline-description">
+                            <p>In the part of Techinquiri group I have learned a lot of new things like how to find content and how to arrange good content for specific peoples and how we can do better for an organization</p>
                         </div>
                     </div>
                 </div>
@@ -3333,109 +3530,53 @@
             // Call the function to add floating animations
             addFloatingAnimation();
 
-            // Mobile Navigation
+            // Mobile Navigation - consolidated version
             const mobileNavToggle = document.getElementById('mobileNavToggle');
             const mainNav = document.getElementById('mainNav');
             const navOverlay = document.getElementById('navOverlay');
             const navLinks = document.querySelectorAll('#mainNav a');
             
-            function toggleMobileNav() {
-                mainNav.classList.toggle('active');
-                navOverlay.classList.toggle('active');
-                document.body.classList.toggle('nav-active'); // Add/remove class to body
-                
-                // Toggle icon between bars and times
-                const icon = mobileNavToggle.querySelector('i');
-                if (icon.classList.contains('fa-bars')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            }
-            
-            // Event listeners for mobile navigation
             if (mobileNavToggle && mainNav && navOverlay) {
-                mobileNavToggle.addEventListener('click', toggleMobileNav);
+                // Single event handler for toggle button
+                mobileNavToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleMobileNav();
+                });
+                
+                // Event handler for overlay
                 navOverlay.addEventListener('click', toggleMobileNav);
                 
-                // Close menu when a link is clicked
+                // Close menu when links are clicked
                 navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
+                    link.addEventListener('click', function() {
                         if (mainNav.classList.contains('active')) {
                             toggleMobileNav();
                         }
                     });
                 });
             }
-        });
-    </script>
-
-    <!-- Add this script at the end of your body tag, just before the closing </body> -->
-    <script>
-        // Mobile navigation fix - standalone script that won't affect other functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileNavToggle = document.getElementById('mobileNavToggle');
-            const mainNav = document.getElementById('mainNav');
-            const navOverlay = document.getElementById('navOverlay');
             
-            if (mobileNavToggle) {
-                mobileNavToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    // Toggle navigation menu
-                    if (mainNav) mainNav.classList.toggle('active');
-                    if (navOverlay) navOverlay.classList.toggle('active');
-                    document.body.classList.toggle('nav-active');
-                    
-                    // Toggle icon
-                    const icon = this.querySelector('i');
-                    if (icon) {
-                        if (icon.classList.contains('fa-bars')) {
-                            icon.classList.remove('fa-bars');
-                            icon.classList.add('fa-times');
-                        } else {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    }
-                });
-            }
-            
-            // Close menu when clicking overlay
-            if (navOverlay) {
-                navOverlay.addEventListener('click', function() {
-                    mainNav.classList.remove('active');
-                    this.classList.remove('active');
-                    document.body.classList.remove('nav-active');
-                    
-                    const icon = mobileNavToggle.querySelector('i');
-                    if (icon) {
+            // Consolidated toggle function
+            function toggleMobileNav() {
+                mainNav.classList.toggle('active');
+                navOverlay.classList.toggle('active');
+                document.body.classList.toggle('nav-active');
+                
+                // Toggle icon between bars and times
+                const icon = mobileNavToggle.querySelector('i');
+                if (icon) {
+                    if (icon.classList.contains('fa-bars')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
                         icon.classList.remove('fa-times');
                         icon.classList.add('fa-bars');
                     }
-                });
+                }
             }
             
-            // Close menu when clicking links
-            const navLinks = document.querySelectorAll('#mainNav a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    if (window.innerWidth <= 992) {
-                        mainNav.classList.remove('active');
-                        if (navOverlay) navOverlay.classList.remove('active');
-                        document.body.classList.remove('nav-active');
-                        
-                        const icon = mobileNavToggle.querySelector('i');
-                        if (icon) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    }
-                });
-            });
+            // Other initialization code can remain here
         });
     </script>
 </body>

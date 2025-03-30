@@ -6,6 +6,7 @@
     color: var(--primary-color);
     cursor: pointer;
     transition: transform 0.2s ease;
+    transform: translateZ(0);
 }
 
 .logo:hover {
