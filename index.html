@@ -2436,7 +2436,8 @@
 
         /* Improve form usability on mobile */
         input, textarea, button {
-            -webkit-appearance: none;
+            -webkit-appearance: none; /* Remove default styling for webkit browsers */
+            appearance: none; /* Standard property for other browsers */
             border-radius: 4px;
         }
     </style>
