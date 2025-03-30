@@ -2275,121 +2275,39 @@
         }
 
         @media (max-width: 768px) {
-            /* Fix header positioning */
+            /* Fix header spacing */
             header {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 1000;
                 padding: 0.5rem 0;
-                background-color: var(--primary-color);
             }
             
-            /* Fix hero section spacing */
+            /* Improve hero section on mobile */
             .hero {
-                padding-top: 5rem; /* Reduced top padding */
-                padding-bottom: 2rem; /* Reduced bottom padding */
-                margin-top: 3rem; /* Add margin to account for fixed header */
+                padding: 6rem 0 3rem;
             }
             
-            /* Fix footer spacing and display */
-            footer {
-                padding: 2rem 0;
-            }
-            
-            .footer-content {
-                gap: 1rem;
-            }
-            
-            /* Fix theme toggle button position */
-            .theme-toggle-btn {
-                bottom: 70px; /* Move up to avoid browser navigation */
-                right: 15px;
-                width: 45px;
-                height: 45px;
-            }
-            
-            /* Ensure content doesn't get hidden behind fixed elements */
-            body {
-                padding-bottom: 60px; /* Add padding to bottom of body */
-            }
-            
-            /* Fix for form validation messages */
-            .form-group {
-                position: relative;
-            }
-            
-            /* Ensure buttons are properly sized and visible */
+            /* Ensure buttons are properly sized */
             .btn {
-                padding: 0.8rem 1rem;
+                width: 100%;
+                justify-content: center;
+                min-height: 44px; /* Better touch target */
+            }
+            
+            /* Fix image display */
+            .profile-image {
+                width: 100%;
+                max-width: 250px;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            /* Improve touch targets */
+            nav a, .social-links a, .theme-option, .bg-option {
                 min-height: 44px;
             }
             
-            /* Fix for mobile navigation menu */
-            nav ul {
-                padding-top: 70px; /* Reduced padding */
-            }
-            
-            /* Fix for section padding */
-            section:first-of-type {
-                margin-top: 60px; /* Add margin to first section */
-            }
-            
-            section:last-of-type {
-                margin-bottom: 60px; /* Add margin to last section */
-            }
-        }
-
-        /* Fix for the purple background issue in contact form */
-        .contact-form {
-            background-color: var(--card-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px var(--shadow-color);
-            border: 1px solid var(--border-color);
-            margin-bottom: 2rem; /* Add margin to bottom */
-        }
-
-        /* Fix for the footer display */
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            width: 100%;
-            position: relative; /* Change from fixed to relative */
-        }
-
-        /* Additional fixes for very small screens */
-        @media (max-width: 360px) {
-            /* Further reduce padding */
-            .container {
-                padding: 0 0.7rem;
-            }
-            
-            /* Ensure footer links are readable */
-            .footer-links {
-                font-size: 0.9rem;
-            }
-            
-            /* Fix copyright text */
-            .copyright {
-                font-size: 0.8rem;
-                padding: 0 0.5rem;
-            }
-            
-            /* Ensure form elements are properly sized */
-            .form-group input,
-            .form-group textarea,
-            .btn {
-                font-size: 16px; /* Prevent iOS zoom */
-            }
-            
-            /* Fix for theme panel position */
-            .theme-toggle-btn {
-                bottom: 80px;
-                right: 10px;
+            /* Fix form elements */
+            .form-group input, .form-group textarea {
+                font-size: 16px; /* Prevent iOS zoom on focus */
             }
         }
 
@@ -2468,12 +2386,11 @@
                     <i class="fas fa-microchip"></i>
                     <span class="logo-text">Abhishek Zinzuvadiya</span>
                 </div>
-                <!-- Make sure this button has proper styling and is visible -->
-                <button class="mobile-nav-toggle" id="mobileNavToggle" style="display: block; z-index: 1001; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">
+                <button class="mobile-nav-toggle" id="mobileNavToggle">
                     <i class="fas fa-bars"></i>
                 </button>
                 <nav>
-                    <ul id="mainNav" style="transition: right 0.3s ease;">
+                    <ul id="mainNav">
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#non-technical-skills">Other Skills</a></li>
@@ -3454,99 +3371,72 @@
             }
         });
     </script>
-    <!-- Add this script right before the closing </body> tag -->
+
+    <!-- Add this script at the end of your body tag, just before the closing </body> -->
     <script>
-        // Standalone mobile navigation script
-        const mobileNavToggle = document.getElementById('mobileNavToggle');
-        const mainNav = document.getElementById('mainNav');
-        const navOverlay = document.getElementById('navOverlay');
-        
-        if (mobileNavToggle) {
-            // Direct click handler
-            mobileNavToggle.onclick = function() {
-                mainNav.classList.toggle('active');
-                navOverlay.classList.toggle('active');
-                document.body.classList.toggle('nav-active');
-                
-                // Toggle icon
-                const icon = this.querySelector('i');
-                if (icon.classList.contains('fa-bars')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            };
-        }
-        
-        // Close menu when overlay is clicked
-        if (navOverlay) {
-            navOverlay.onclick = function() {
-                mainNav.classList.remove('active');
-                navOverlay.classList.remove('active');
-                document.body.classList.remove('nav-active');
-                
-                const icon = mobileNavToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            };
-        }
-        
-        // Close menu when links are clicked
-        const navLinks = document.querySelectorAll('#mainNav a');
-        navLinks.forEach(link => {
-            link.onclick = function() {
-                if (mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    navOverlay.classList.remove('active');
-                    document.body.classList.remove('nav-active');
-                    
-                    const icon = mobileNavToggle.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            };
-        });
-    </script>
-    <!-- Add this script at the very end of your body tag -->
-    <script>
-        // Immediately executing function for mobile navigation
-        (function() {
-            var mobileNavToggle = document.getElementById('mobileNavToggle');
-            var mainNav = document.getElementById('mainNav');
-            var navOverlay = document.getElementById('navOverlay');
+        // Mobile navigation fix - standalone script that won't affect other functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavToggle = document.getElementById('mobileNavToggle');
+            const mainNav = document.getElementById('mainNav');
+            const navOverlay = document.getElementById('navOverlay');
             
-            // Direct click handler with inline function
             if (mobileNavToggle) {
                 mobileNavToggle.addEventListener('click', function(e) {
                     e.preventDefault();
-                    console.log('Mobile nav toggle clicked');
+                    e.stopPropagation();
                     
-                    if (mainNav.classList.contains('active')) {
-                        mainNav.classList.remove('active');
-                        if (navOverlay) navOverlay.classList.remove('active');
-                        document.body.classList.remove('nav-active');
-                        
-                        var icon = mobileNavToggle.querySelector('i');
-                        if (icon) {
-                            icon.classList.remove('fa-times');
-                            icon.classList.add('fa-bars');
-                        }
-                    } else {
-                        mainNav.classList.add('active');
-                        if (navOverlay) navOverlay.classList.add('active');
-                        document.body.classList.add('nav-active');
-                        
-                        var icon = mobileNavToggle.querySelector('i');
-                        if (icon) {
+                    // Toggle navigation menu
+                    if (mainNav) mainNav.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                    document.body.classList.toggle('nav-active');
+                    
+                    // Toggle icon
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        if (icon.classList.contains('fa-bars')) {
                             icon.classList.remove('fa-bars');
                             icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
                         }
                     }
                 });
             }
-        })();
+            
+            // Close menu when clicking overlay
+            if (navOverlay) {
+                navOverlay.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    this.classList.remove('active');
+                    document.body.classList.remove('nav-active');
+                    
+                    const icon = mobileNavToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+            
+            // Close menu when clicking links
+            const navLinks = document.querySelectorAll('#mainNav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 992) {
+                        mainNav.classList.remove('active');
+                        if (navOverlay) navOverlay.classList.remove('active');
+                        document.body.classList.remove('nav-active');
+                        
+                        const icon = mobileNavToggle.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
