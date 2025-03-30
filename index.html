@@ -3624,6 +3624,56 @@
             }
         });
     </script>
+
+    <script>
+        // Direct mobile toggle fix - completely standalone
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                // Get the mobile toggle button
+                const mobileToggle = document.getElementById('mobileNavToggle');
+                
+                if (mobileToggle) {
+                    // Create a completely new button to replace the existing one
+                    const newButton = document.createElement('button');
+                    newButton.id = 'mobileNavToggle';
+                    newButton.className = 'mobile-nav-toggle';
+                    newButton.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    // Replace the old button
+                    mobileToggle.parentNode.replaceChild(newButton, mobileToggle);
+                    
+                    // Add a direct click handler
+                    newButton.onclick = function(e) {
+                        if (e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                        }
+                        
+                        // Get navigation elements
+                        const mainNav = document.getElementById('mainNav');
+                        const navOverlay = document.getElementById('navOverlay');
+                        
+                        // Toggle classes
+                        if (mainNav) mainNav.classList.toggle('active');
+                        if (navOverlay) navOverlay.classList.toggle('active');
+                        document.body.classList.toggle('nav-active');
+                        
+                        // Toggle icon
+                        const icon = this.querySelector('i');
+                        if (icon) {
+                            if (icon.classList.contains('fa-bars')) {
+                                icon.classList.remove('fa-bars');
+                                icon.classList.add('fa-times');
+                            } else {
+                                icon.classList.remove('fa-times');
+                                icon.classList.add('fa-bars');
+                            }
+                        }
+                    };
+                }
+            }, 500); // Small delay to ensure DOM is fully loaded
+        });
+    </script>
 </body>
 </html>
 
