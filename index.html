@@ -3742,6 +3742,124 @@
             });
         });
     </script>
+
+    <script>
+        // Mobile navigation fix - completely new implementation
+        window.addEventListener('load', function() {
+            // Create a completely new mobile toggle button
+            const headerContent = document.querySelector('.header-content');
+            const oldToggle = document.getElementById('mobileNavToggle');
+            
+            if (headerContent && oldToggle) {
+                // Remove all existing toggle buttons to avoid conflicts
+                oldToggle.remove();
+                
+                // Create new toggle button
+                const newToggle = document.createElement('button');
+                newToggle.id = 'mobileNavToggle';
+                newToggle.className = 'mobile-nav-toggle';
+                newToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                newToggle.style.display = 'block';
+                newToggle.style.zIndex = '2000';
+                newToggle.style.position = 'relative';
+                
+                // Insert the new toggle button
+                const logo = document.querySelector('.logo');
+                if (logo && logo.parentNode) {
+                    logo.parentNode.insertBefore(newToggle, logo.nextSibling);
+                } else {
+                    headerContent.appendChild(newToggle);
+                }
+                
+                // Get navigation elements
+                const mainNav = document.getElementById('mainNav');
+                const navOverlay = document.getElementById('navOverlay');
+                
+                // Direct click handler with touchstart support
+                function handleToggleClick(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Toggle navigation
+                    if (mainNav) {
+                        if (mainNav.classList.contains('active')) {
+                            mainNav.classList.remove('active');
+                            if (navOverlay) navOverlay.classList.remove('active');
+                            document.body.classList.remove('nav-active');
+                            newToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        } else {
+                            mainNav.classList.add('active');
+                            if (navOverlay) navOverlay.classList.add('active');
+                            document.body.classList.add('nav-active');
+                            newToggle.innerHTML = '<i class="fas fa-times"></i>';
+                        }
+                    }
+                }
+                
+                // Add event listeners
+                newToggle.addEventListener('click', handleToggleClick);
+                newToggle.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    handleToggleClick(e);
+                }, {passive: false});
+                
+                // Close menu when overlay is clicked
+                if (navOverlay) {
+                    navOverlay.addEventListener('click', function() {
+                        mainNav.classList.remove('active');
+                        navOverlay.classList.remove('active');
+                        document.body.classList.remove('nav-active');
+                        newToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                    
+                    navOverlay.addEventListener('touchstart', function(e) {
+                        e.preventDefault();
+                        mainNav.classList.remove('active');
+                        navOverlay.classList.remove('active');
+                        document.body.classList.remove('nav-active');
+                        newToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }, {passive: false});
+                }
+                
+                // Close menu when links are clicked
+                const navLinks = document.querySelectorAll('#mainNav a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mainNav.classList.remove('active');
+                        if (navOverlay) navOverlay.classList.remove('active');
+                        document.body.classList.remove('nav-active');
+                        newToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    });
+                    
+                    link.addEventListener('touchstart', function(e) {
+                        // Don't prevent default here to allow navigation
+                        setTimeout(function() {
+                            mainNav.classList.remove('active');
+                            if (navOverlay) navOverlay.classList.remove('active');
+                            document.body.classList.remove('nav-active');
+                            newToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        }, 100);
+                    });
+                });
+                
+                // Improve mobile menu visibility
+                if (mainNav) {
+                    mainNav.style.backgroundColor = 'rgba(103, 58, 183, 0.95)'; // Purple theme
+                    mainNav.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.5)';
+                    
+                    // Make menu items more visible and tappable
+                    const menuItems = mainNav.querySelectorAll('a');
+                    menuItems.forEach(item => {
+                        item.style.padding = '15px 20px';
+                        item.style.display = 'block';
+                        item.style.fontSize = '18px';
+                        item.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+                        item.style.color = 'white';
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
 
