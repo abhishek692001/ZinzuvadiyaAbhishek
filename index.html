@@ -2468,11 +2468,12 @@
                     <i class="fas fa-microchip"></i>
                     <span class="logo-text">Abhishek Zinzuvadiya</span>
                 </div>
-                <button class="mobile-nav-toggle" id="mobileNavToggle">
+                <!-- Make sure this button has proper styling and is visible -->
+                <button class="mobile-nav-toggle" id="mobileNavToggle" style="display: block; z-index: 1001; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">
                     <i class="fas fa-bars"></i>
                 </button>
                 <nav>
-                    <ul id="mainNav">
+                    <ul id="mainNav" style="transition: right 0.3s ease;">
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#non-technical-skills">Other Skills</a></li>
@@ -3507,6 +3508,45 @@
                 }
             };
         });
+    </script>
+    <!-- Add this script at the very end of your body tag -->
+    <script>
+        // Immediately executing function for mobile navigation
+        (function() {
+            var mobileNavToggle = document.getElementById('mobileNavToggle');
+            var mainNav = document.getElementById('mainNav');
+            var navOverlay = document.getElementById('navOverlay');
+            
+            // Direct click handler with inline function
+            if (mobileNavToggle) {
+                mobileNavToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Mobile nav toggle clicked');
+                    
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        if (navOverlay) navOverlay.classList.remove('active');
+                        document.body.classList.remove('nav-active');
+                        
+                        var icon = mobileNavToggle.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    } else {
+                        mainNav.classList.add('active');
+                        if (navOverlay) navOverlay.classList.add('active');
+                        document.body.classList.add('nav-active');
+                        
+                        var icon = mobileNavToggle.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        }
+                    }
+                });
+            }
+        })();
     </script>
 </body>
 </html>
