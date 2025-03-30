@@ -3579,6 +3579,51 @@
             // Other initialization code can remain here
         });
     </script>
+
+    <!-- Add this script at the very end of your HTML file, just before the closing </body> tag -->
+    <script>
+        // Mobile toggle button fix - standalone script
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavToggle = document.getElementById('mobileNavToggle');
+            
+            if (mobileNavToggle) {
+                // Remove any existing event listeners by cloning and replacing the element
+                const newToggle = mobileNavToggle.cloneNode(true);
+                mobileNavToggle.parentNode.replaceChild(newToggle, mobileNavToggle);
+                
+                // Add fresh event listeners
+                newToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const mainNav = document.getElementById('mainNav');
+                    const navOverlay = document.getElementById('navOverlay');
+                    
+                    if (mainNav) mainNav.classList.toggle('active');
+                    if (navOverlay) navOverlay.classList.toggle('active');
+                    document.body.classList.toggle('nav-active');
+                    
+                    // Toggle icon
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        if (icon.classList.contains('fa-bars')) {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        } else {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
+                });
+                
+                // Add touchstart for better mobile response
+                newToggle.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    this.click(); // Trigger the click event
+                }, {passive: false});
+            }
+        });
+    </script>
 </body>
 </html>
 
